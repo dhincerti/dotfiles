@@ -1,0 +1,14 @@
+- defaults:
+    link:
+        create: true
+        relink: true
+
+- clean: ['~']
+
+- aptget:
+  - curl
+  - htop
+  - guake
+  
+- link:
+  "~/.config/autoload" : ./config/autoload
