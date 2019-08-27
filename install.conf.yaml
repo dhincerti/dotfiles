@@ -1,14 +1,20 @@
 - defaults:
     link:
-        create: true
-        relink: true
+      relink: true
+      create: true
 
 - clean: ['~']
 
-- aptget:
-  - curl
-  - htop
-  - guake
-  
 - link:
-  "~/.config/autoload" : ./config/autoload
+    ~/.gitconfig:
+      path: gitconfig
+      force: true
+    ~/.config/autostart/:
+      glob: true
+      force: true
+      path: config/autostart/*
+
+#- aptget:
+#    - curl
+#    - htop
+#    - guake
