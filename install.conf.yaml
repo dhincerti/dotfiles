@@ -7,7 +7,7 @@
 
 - link:
     ~/.gitconfig:
-      path: gitconfig
+      path: git/.gitconfig
       force: true
     ~/.config/autostart/:
       glob: true
