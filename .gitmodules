@@ -7,3 +7,9 @@
 [submodule "shell/.oh-my-zsh"]
 	path = shell/.oh-my-zsh
 	url = https://github.com/robbyrussell/oh-my-zsh.git
+[submodule "themes/flat-remix"]
+	path = themes/flat-remix
+	url = https://github.com/daniruiz/flat-remix
+[submodule "themes/flat-remix-gtk"]
+	path = themes/flat-remix-gtk
+	url = https://github.com/daniruiz/flat-remix-gtk

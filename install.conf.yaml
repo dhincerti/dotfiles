@@ -2,6 +2,7 @@
     link:
       relink: true
       create: true
+      force: true
 
 - clean: ['~']
 
@@ -12,22 +13,29 @@
     - powerline
     - fonts-powerline
     - guake
+    - gnome-tweak-tool
 
 - link:
-    ~/.gitconfig:
-      path: git/.gitconfig
-      force: true
-    ~/.config/autostart/:
+    ~/.gitconfig: git/.gitconfig
+    ~/.bashrc: shell/.bashrc
+    ~/.zshrc: shell/.zshrc
+    ~/.oh-my-zsh: shell/.oh-my-zsh
+    /etc/environment: etc/environment
+    ~/.config/:
       glob: true
-      force: true
-      path: config/autostart/*
-    ~/.zshrc:
-      path: shell/.zshrc
-      force: true
-    ~/.oh-my-zsh/:
+      path: config/*
+    ~/.icons/:
       glob: true
-      force: true
-      path: shell/.oh-my-zsh/*
+      path: themes/flat-remix/*
+      force: false
+      relink: false
+    ~/.themes/:
+      glob: true
+      path: themes/flat-remix-gtk/*
+      force: false
+      relink: false
 
 - shell:
     - chsh -s /bin/zsh
+    - sudo find ~/.icons/* ! -name "Flat-*" -delete
+    - sudo find ~/.themes/* ! -name "Flat-*" -delete
