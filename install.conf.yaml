@@ -5,6 +5,14 @@
 
 - clean: ['~']
 
+- apt-get:
+    - curl
+    - htop
+    - zsh
+    - powerline
+    - fonts-powerline
+    - guake
+
 - link:
     ~/.gitconfig:
       path: git/.gitconfig
@@ -13,8 +21,13 @@
       glob: true
       force: true
       path: config/autostart/*
+    ~/.zshrc:
+      path: shell/.zshrc
+      force: true
+    ~/.oh-my-zsh/:
+      glob: true
+      force: true
+      path: shell/.oh-my-zsh/*
 
-#- aptget:
-#    - curl
-#    - htop
-#    - guake
+- shell:
+    - chsh -s /bin/zsh
