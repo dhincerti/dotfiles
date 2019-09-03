@@ -20,6 +20,7 @@
     ~/.bashrc: shell/.bashrc
     ~/.zshrc: shell/.zshrc
     ~/.oh-my-zsh: shell/.oh-my-zsh
+    ~/.local/share/applications: share/applications
     /etc/environment: etc/environment
     ~/.config/:
       glob: true
