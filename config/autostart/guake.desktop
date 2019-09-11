@@ -1,10 +1,10 @@
 [Desktop Entry]
-Type=Application
+Name=Guake Terminal
+Comment=Use the command line in a Quake-like terminal
+TryExec=guake
 Exec=guake
-Hidden=false
-NoDisplay=false
-X-GNOME-Autostart-enabled=true
-Name[en_US]=Guake
-Name=Guake
-Comment[en_US]=Guake terminal
-Comment=Guake terminal
+Icon=guake
+Type=Application
+Categories=GNOME;GTK;System;Utility;TerminalEmulator;
+StartupNotify=true
+X-Desktop-File-Install-Version=0.22

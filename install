@@ -18,7 +18,7 @@ get_plugins_dir() {
 }
 
 cd $BASEDIR
-git -C $DOTBOT_DIR submodule sync --recursive
-git submodule update --init --recursive $DOTBOT_DIR
+git submodule sync --recursive
+git submodule update --init --recursive
 
 sudo $DOTBOT_BIN $(get_plugins_dir) -c $CONFIG ${@}
