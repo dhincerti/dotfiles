@@ -1,0 +1,19 @@
+Host github.com-dhincerti
+	HostName github.com
+	User git
+	IdentityFile ~/.ssh/dhincerti_ed25519
+
+Host dockerhub
+	HostName hub.docker.com
+	User diegoincerti
+	IdentityFile ~/.ssh/dextra_ed25519
+	
+Host github.com
+	HostName github.com
+	User git
+	IdentityFile ~/.ssh/dextra_ed25519
+	
+Host bitbucket
+	HostName bitbucket.org
+	User diego-incerti
+	IdentityFile ~/.ssh/dextra_ed25519

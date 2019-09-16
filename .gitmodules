@@ -13,3 +13,15 @@
 [submodule "themes/flat-remix-gtk"]
 	path = themes/flat-remix-gtk
 	url = https://github.com/daniruiz/flat-remix-gtk
+[submodule "dotbot-plugins/dotbot-asdf"]
+	path = dotbot-plugins/dotbot-asdf
+	url = https://github.com/sobolevn/dotbot-asdf.git
+[submodule "asdf"]
+	path = asdf
+	url = https://github.com/asdf-vm/asdf.git
+[submodule "plugins/dotbot-apt-get"]
+	path = plugins/dotbot-apt-get
+	url = git@github.com:rubenvereecken/dotbot-apt-get.git
+[submodule "plugins/dotbot-asdf"]
+	path = plugins/dotbot-asdf
+	url = git@github.com:rubenvereecken/dotbot-asdf.git

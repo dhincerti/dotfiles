@@ -3,9 +3,45 @@
       relink: true
       create: true
       force: true
-
-- clean: ['~']
-
+        
+- clean:
+    - '~'
+    - '~/usr'
+    - '/etc'
+    
+- link:
+    # Security
+    ~/.ssh/config: ssh/config
+#    ~/.gnupg:
+#    ~/.shh:
+    
+    # System
+    /etc/environment: etc/environment
+    ~/.config/:
+      glob: true
+      path: config/*
+      
+    # Shell
+    ~/.bashrc: shell/.bashrc  
+    ~/.zshrc: shell/.zshrc
+    ~/.oh-my-zsh:
+      path: shell/.oh-my-zsh
+      
+    # SCM
+    ~/.gitconfig: git/.gitconfig
+    
+    # Programs
+    ~/.asdf:
+    ~/.local/share/applications/:
+      glob: true
+      path: local/share/applications/*
+    
+    # Interface
+    ~/.themes/:
+      glob: true
+      path: themes/flat-remix-gtk/*
+      force: false
+      
 - apt-get:
     - curl
     - htop
@@ -14,29 +50,28 @@
     - fonts-powerline
     - guake
     - gnome-tweak-tool
-
-- link:
-    ~/.gitconfig: git/.gitconfig
-    ~/.bashrc: shell/.bashrc
-    ~/.zshrc: shell/.zshrc
-    ~/.oh-my-zsh: shell/.oh-my-zsh
-    ~/.local/share/applications: share/applications
-    /etc/environment: etc/environment
-    ~/.config/:
-      glob: true
-      path: config/*
-    ~/.icons/:
-      glob: true
-      path: themes/flat-remix/*
-      force: false
-      relink: false
-    ~/.themes/:
-      glob: true
-      path: themes/flat-remix-gtk/*
-      force: false
-      relink: false
-
+  
+- asdf:
+    - plugin: python
+      url: https://github.com/tuvistavie/asdf-python.git
+    - plugin: java
+      url: https://github.com/skotchpine/asdf-java
+    - plugin: docker
+      url: https://github.com/micke/asdf-docker
+    - plugin: docker-compose
+      url: https://github.com/virtualstaticvoid/asdf-docker-compose
+    - plugin: maven
+      url: https://github.com/skotchpine/asdf-maven
+    - plugin: php
+      url: https://github.com/odarriba/asdf-php
+    - plugin: kubectl
+      url: https://github.com/Banno/asdf-kubectl
+    - plugin: mongo
+      url: https://github.com/sylph01/asdf-mongodb
+      
 - shell:
-    - chsh -s /bin/zsh
-    - sudo find ~/.icons/* ! -name "Flat-*" -delete
-    - sudo find ~/.themes/* ! -name "Flat-*" -delete
+    - ["mkdir -p ~/Projects", Creating Projects folder]
+    - ["mkdir -p ~/Programs", Creating Programs folder]
+    - ["chsh -s /bin/zsh", Setting zsh as default shell]
+    - ["source ~/.zshrc"]
+

@@ -1,24 +1,26 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 set -e
 
-CONFIG="install.conf.yaml"
-BASEDIR="$(cd "$(dirname $BASH_SOURCE[0])" && pwd)"
-DOTBOT_DIR="dotbot"
-DOTBOT_PLUGINS_DIR="dotbot-plugins"
-DOTBOT_BIN="$DOTBOT_DIR/bin/dotbot"
+[ "$UID" -eq 0 ] || exec sudo -E env "PATH=$PATH" bash "$0" "$@"
+
+CONFIG_FILE="install.conf.yaml"
+BASE_DIR="$(cd "$(dirname $BASH_SOURCE[0])" && pwd)"
+PLUGINS_DIR="$BASE_DIR/plugins/*"
+DOTBOT_EXEC="dotbot/bin/dotbot"
 
 get_plugins_dir() {
     plugins="";
-    for i in $(ls -d $DOTBOT_PLUGINS_DIR/*)
+    for i in $(ls -d $PLUGINS_DIR)
     do
         plugins+="--plugin-dir ${i%%/} ";
     done
     echo "$plugins";
 }
 
-cd $BASEDIR
+cd $BASE_DIR
+
 git submodule sync --recursive
 git submodule update --init --recursive
 
-sudo $DOTBOT_BIN $(get_plugins_dir) -c $CONFIG ${@}
+$DOTBOT_EXEC $(get_plugins_dir) -c $CONFIG_FILE ${@}
