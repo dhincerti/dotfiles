@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Error><Code>NoSuchBucket</Code><Message>The specified bucket does not exist</Message><BucketName>plugin-registry-playground</BucketName><RequestId>8FAE16735733B6B2</RequestId><HostId>pyRvH8CyMWPHogmE8DwTg3ivEFsKmlubljsYzgMZkFLdx56Gg5nB0DAKWAHab8TrCb63CxqgP6U=</HostId></Error>

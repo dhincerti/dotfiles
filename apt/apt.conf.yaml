@@ -1,0 +1,8 @@
+- apt-get:
+    - curl
+    - htop
+    - zsh
+    - powerline
+    - fonts-powerline
+    - guake
+    - gnome-tweak-tool

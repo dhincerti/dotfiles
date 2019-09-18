@@ -1,0 +1,60 @@
+- defaults:
+    link:
+      relink: true
+      create: true
+      force: true
+    shell:
+      quiet: true
+      stdout: true
+      stderr: true
+        
+- clean:
+    - "~"
+    - ~/.config
+    - ~/.config/autostart
+    - ~/.config/dconf
+    - ~/.local/share/applications
+    - ~/.themes
+    
+- link:
+    # System
+    ~/.config/mimeapps.list: config/mimeapps.list
+    ~/.config/autostart/:
+      glob: true
+      path: config/autostart/*
+    ~/.config/dconf/:
+      glob: true
+      path: config/dconf/*
+    ~/.local/share/applications/:
+      glob: true
+      path: local/share/applications/*
+      
+    # Shell
+    ~/.zshrc: shell/.zshrc
+  
+    # Security
+    ~/.ssh/config: ssh/config
+#    ~/.gnupg: ~TBD~
+#    ~/.shh: ~TBD~
+      
+    # SCM
+    ~/.gitconfig: git/.gitconfig
+    
+    # Graphical Interfaces
+    ~/.themes/:
+      glob: true
+      path: themes/flat-remix-gtk/*
+    ~/.config/:
+      glob: true
+      path: gtk/*
+        
+- shell:
+    - # Projects folder
+      command: mkdir -p ~/Projects
+      description: Creating Projects folder
+      stdout: true
+    - # Programs folder
+      command: mkdir -p ~/Programs
+      description: Creating Programs folder
+      stdout: true
+      
