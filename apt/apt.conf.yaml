@@ -1,8 +1,11 @@
 - apt-get:
+    - apt-transport-https
+    - ca-certificates
     - curl
-    - htop
-    - zsh
-    - powerline
     - fonts-powerline
-    - guake
     - gnome-tweak-tool
+    - guake
+    - htop
+    - powerline
+    - software-properties-common
+    - zsh

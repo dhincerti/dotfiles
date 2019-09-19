@@ -19,12 +19,8 @@
 - link:
     # System
     ~/.config/mimeapps.list: config/mimeapps.list
-    ~/.config/autostart/:
-      glob: true
-      path: config/autostart/*
-    ~/.config/dconf/:
-      glob: true
-      path: config/dconf/*
+    ~/.config/autostart: config/autostart
+    ~/.config/dconf: config/dconf
     ~/.local/share/applications/:
       glob: true
       path: local/share/applications/*
