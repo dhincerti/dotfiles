@@ -1,10 +1,10 @@
 [Desktop Entry]
-Version=1.0
-Type=Application
-Name=PhpStorm
-Icon=/home/diego.incerti/Programs/PhpStorm/bin/phpstorm.svg
-Exec="/home/diego.incerti/Programs/PhpStorm/bin/phpstorm.sh" %f
-Comment=Lightning-smart PHP IDE
 Categories=Development;IDE;
-Terminal=false
+Comment=Lightning-smart PHP IDE
+Exec="/home/diego.incerti/.local/share/JetBrains/Toolbox/apps/PhpStorm/ch-0/192.6603.42/bin/phpstorm.sh" %f
+Icon=/home/diego.incerti/.local/share/JetBrains/Toolbox/apps/PhpStorm/ch-0/.icon.svg
+Name=PhpStorm
 StartupWMClass=jetbrains-phpstorm
+Terminal=false
+Type=Application
+Version=1.0

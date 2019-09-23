@@ -73,8 +73,10 @@ plugins=(
   aws
   composer
   docker
+  docker-compose
   git
   gitfast
+  git-extras
   jsontools
   kubectl
   mvn

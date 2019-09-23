@@ -35,6 +35,7 @@
       
     # SCM
     ~/.gitconfig: git/.gitconfig
+    ~/.gitignore: git/.gitignore-global
     
     # Graphical Interfaces
     ~/.themes/:

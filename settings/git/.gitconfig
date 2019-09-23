@@ -1,3 +1,5 @@
 [user]
 	name = Diego Incerti
 	email = diego_incerti@hotmail.com
+[core]
+	excludesfile = /home/diego.incerti/.gitignore

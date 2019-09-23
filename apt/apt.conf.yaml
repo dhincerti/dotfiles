@@ -2,8 +2,11 @@
     - apt-transport-https
     - ca-certificates
     - curl
+    - dirmngr
     - fonts-powerline
+    - git-extras
     - gnome-tweak-tool
+    - gpg
     - guake
     - htop
     - powerline
