@@ -12,3 +12,7 @@ Install git: `sudo apt update && sudo apt install git`
 2. Run `./install.sh` file.
 3. Go take a coffee.
 4. Be happy.
+
+
+## Manual steps
+1. Change Guake Preferencies: Shell > Default interpreter > /usr/bin/zsh
