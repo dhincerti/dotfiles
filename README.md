@@ -4,7 +4,17 @@ See: [dotbot project](https://github.com/anishathalye/dotbot).
 
 ## Prerequisites
 
-Install git: `sudo apt update && sudo apt install git`
+1. Install git
+`sudo apt update && sudo apt install git`
+
+2. Generate ssh if needed
+`ssh-keygen -o -a 100 -t ed25519 -f ~/.ssh/<KEY_NAME> -C "<E-MAIL>"`
+
+3. Add key to the ssh-agent
+`ssh-add ~/.ssh/<KEY_NAME>`
+
+4. [Add a new SSH key to your GitHub account](https://help.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account)
+
 
 ## Using it
 1. Clone this repository: `git clone https://github.com/dhincerti/dotfiles.git ~/.dotfiles`
@@ -14,8 +24,8 @@ Install git: `sudo apt update && sudo apt install git`
 4. Be happy.
 
 
-## Manual steps
-1. Change Guake Preferencies: Shell > Default interpreter > /usr/bin/zsh
+## Post install manual steps
+1. Change Guake Preferencies: `Shell > Default interpreter > /usr/bin/zsh`
 
 
 ## Troubleshoting
